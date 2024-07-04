@@ -2,7 +2,7 @@
 
 import { PRODUCTS_CATAGORIES } from "@/src/Config";
 import { cn } from "@/src/lib/utils";
-import { Button } from "@/ui/button";
+import { Button } from "@/src/ui/button";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -67,7 +67,9 @@ const NavItem = ({ category, handleOpen, isAnyOpen, isOpen }: NavItemProps) => {
                         <Link
                           href={item.href}
                           className="mt-6 block font-medium text-gray-900"
-                        >{item.name}</Link>
+                        >
+                          {item.name}
+                        </Link>
                         <p className="mt-1">Shop Now</p>
                       </div>
                     ))}

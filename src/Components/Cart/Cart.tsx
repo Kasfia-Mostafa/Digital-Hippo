@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { formatPrice } from "@/src/lib/utils";
-import { buttonVariants } from "@/ui/button";
+import { buttonVariants } from "@/src/ui/button";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

@@ -2,7 +2,7 @@ import Link from "next/link";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import { Icons } from "../Icons";
 import NavItems from "./NavItems";
-import { buttonVariants } from "@/ui/button";
+import { buttonVariants } from "@/src/ui/button";
 import { Divide } from "lucide-react";
 import Cart from "../Cart/Cart";
 
