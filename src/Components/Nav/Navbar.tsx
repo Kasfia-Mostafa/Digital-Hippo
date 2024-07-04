@@ -4,6 +4,7 @@ import { Icons } from "../Icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "@/ui/button";
 import { Divide } from "lucide-react";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
   const user = null;
