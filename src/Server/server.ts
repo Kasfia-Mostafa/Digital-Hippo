@@ -14,16 +14,18 @@ const start = async () => {
       },
     },
   });
-  app.use((req, res) => nextHandler(req, res));
+
+  
+  app.use((req, res) => nextHandler(req, res))
   nextApp.prepare().then(() => {
-    payload.logger.info("Digital hippo in production");
+    payload.logger.info('Digital Hippo on work')
 
     app.listen(PORT, async () => {
       payload.logger.info(
         `Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`
-      );
-    });
-  });
+      )
+    })
+  })
 };
 
 start();
