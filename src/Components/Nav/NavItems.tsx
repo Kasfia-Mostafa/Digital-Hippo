@@ -40,9 +40,7 @@ const NavItems = () => {
             setActiveIndex(index);
           }
         };
-
         const isOpen = index === activeIndex;
-
         return (
           <NavItem
             key={category.value}
