@@ -9,18 +9,13 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+
+import {
+  AuthCredentialValidator,
+  TAuthCredentialValidator,
+} from "@/src/lib/account-credentials-validator";
 
 const Page = () => {
-  const AuthCredentialValidator = z.object({
-    email: z.string().email(),
-    password: z
-      .string()
-      .min(8, { message: "Password must be at least 8 character long" }),
-  });
-
-  type TAuthCredentialValidator = z.infer<typeof AuthCredentialValidator>;
-
   const {
     register,
     handleSubmit,
@@ -29,13 +24,12 @@ const Page = () => {
     resolver: zodResolver(AuthCredentialValidator),
   });
 
-
-  const onSubmit = ({email,password}:TAuthCredentialValidator)=>{
-    
-  }
+  const onSubmit = ({ email, password }: TAuthCredentialValidator) => {
+    // send data to server
+  };
 
   return (
-    <>
+    <div>
       <div className="container relative flex pt-20 flex-col items-center justify-center lg:px-0">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col items-center space-y-2 text-center">
@@ -82,7 +76,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
